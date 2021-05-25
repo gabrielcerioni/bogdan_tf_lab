@@ -1,14 +1,18 @@
 terraform {
-  required_version = ">= 0.13.1"
+  required_version = "0.14.9"
 
   required_providers {
-    aws        = ">= 3.37.0"
-    local      = ">= 1.4"
-    random     = ">= 2.1"
-    kubernetes = ">= 1.11.1"
-    http = {
-      source  = "terraform-aws-modules/http"
-      version = ">= 2.4.1"
+    "google" = {
+      source  = "hashicorp/google"
+      version = ">= 3.61.0"
+    }
+    "google-beta" = {
+      source  = "hashicorp/google-beta"
+      version = ">= 3.61.0"
+    }
+    "kubernetes" = {
+      source  = "hashicorp/kubernetes"
+      version = ">= 2.0.3"
     }
   }
 }
